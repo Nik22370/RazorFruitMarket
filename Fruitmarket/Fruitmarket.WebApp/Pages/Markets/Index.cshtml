@@ -1,0 +1,56 @@
+@page
+@model Fruitmarket.WebApp.Pages.Markets.Index
+@section head
+{
+    <style>    
+    .closed{
+    background-color: lightgrey;
+    }
+   
+    
+    </style>
+}
+
+<h3> Liste der Märkte </h3>
+    <p> Erstellt um @DateTime.Now.ToString("HH:mm").</p>
+
+    <table class="table table-sm">
+        <thead>
+        <tr>
+            
+            <th> Name </th>
+            <th>Address</th>
+            <th>StreetNumber</th>
+            
+
+
+
+
+        </tr>
+        </thead>
+        <tbody>
+            @foreach (var p in Model.Markets)
+            {
+                
+                <tr class = "closed">
+                    
+                    <td>@p.Name</td>
+                    <td>@p.Address.Street</td>
+                    <td>@p.Address.StreetNumber</td>
+                   
+                    
+                    
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+

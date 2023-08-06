@@ -1,0 +1,29 @@
+@page "{guid}"
+@model Fruitmarket.WebApp.Pages.Markets.DetailsModel
+
+<h3>Details zum Produkt @Model.Product.Name</h3>
+<h4>Details zu den Produkten</h4>
+<table class="table table-sm ">
+    <thead>
+    
+    <tr>
+        <th>Weight</th>
+        <th>IsFruit</th>
+        
+        
+    </tr>
+    
+    </thead>
+    
+    <tbody>
+    @foreach (var fv in Model.Product._fruitsandvegetables.OrderBy(fv=>fv.Weight))
+    {
+        <tr>
+            <td>@fv.Weight</td>
+            <td>@fv.IsFruit</td>
+        </tr>
+        
+        
+    }
+    </tbody>
+</table>

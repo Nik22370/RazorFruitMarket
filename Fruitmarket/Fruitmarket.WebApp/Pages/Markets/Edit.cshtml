@@ -1,0 +1,18 @@
+@page "{guid}"
+@model Fruitmarket.WebApp.Pages.Edit
+
+
+<form method="post" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+    
+    <label asp-for="Product.Name"> Name </label>
+    <input asp-for="Product.Name"/>
+
+    <label asp-for="Product.Price"> Price </label>
+    <input asp-for="Product.Price"/>
+
+    <button type="submit">Send</button>
+
+</form>
+
+
+
