@@ -1,0 +1,84 @@
+@startuml
+class Market <<aggregate>>
+{
++ Id : int 
++ Name: string
++ Products : IReadOnlyCollection<Product>
++ Address: Address
++ Owner: Owner
+---
++ Market (string name, Address address, Owner owner)
++ RemoveProducts(Product Product)
++ AddProduct(Product Product)
++ AddFruitOrVegetable(FruitsAndVegetables f)
++ CountProducts()
+}
+
+class Person{
+    + Id: int
+    + Firstname: string
+    + Lastname: string
+    + Address: Address
+    ---
+    + Person(string firstname, string lastname, Address address)
+    + AllInfos()
+}
+
+class Customer{
+    + Creditcard: string
+    ---
+    + Customer(Person person, string creditcard)
+}
+class Owner{
+    + Companyname: string
+    + CompanyType: string
+    ---
+    + Owner(Person person, string companyname, string companyType)
+    + AllInfos()
+}
+class Address <<value object>>{
+    + Street: string
+    + StreetNumber: string
+    
+}
+class Product{
+    + Id: int
+    + Guid : Guid
+    + Name: string
+    + Price: decimal
+    ---
+    + Product(string name, decimal price)
+    + nameAndPrice()
+}
+class FruitsAndVegetables{
+    + Weight: string
+    + isFruit: bool
+    ---
+    + FruitsAndVegetables(Product p, string weight, bool isfruit)
+    + AllInfos()
+}
+
+class Order <<aggregate>>{
+    + Id: int
+    + Date: DateTime
+    + Customer: Customer
+    + Products : IReadOnlyCollection<Product>
+    ---
+    + Order(Customer customer)
+    + TotalPrice()
+    + AddProducts(Product product)
+    + RemoveProducts(Product Product)
+    + CountProducts()
+}
+
+
+Owner -up-|> Person
+FruitsAndVegetables -up|> Product
+Customer -up-|> Person
+Market o--> Product
+Market <--> Owner
+Order <--> Customer
+Order *--> Product
+Person *--> Address
+Market *--> Address
+@enduml

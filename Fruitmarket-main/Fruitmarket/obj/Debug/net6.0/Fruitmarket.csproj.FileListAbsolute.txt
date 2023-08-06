@@ -1,0 +1,12 @@
+/Users/paulherbich/RiderProjects/Fruitmarket/Fruitmarket/bin/Debug/net6.0/Fruitmarket.deps.json
+/Users/paulherbich/RiderProjects/Fruitmarket/Fruitmarket/bin/Debug/net6.0/Fruitmarket.dll
+/Users/paulherbich/RiderProjects/Fruitmarket/Fruitmarket/bin/Debug/net6.0/Fruitmarket.pdb
+/Users/paulherbich/RiderProjects/Fruitmarket/Fruitmarket/obj/Debug/net6.0/Fruitmarket.csproj.AssemblyReference.cache
+/Users/paulherbich/RiderProjects/Fruitmarket/Fruitmarket/obj/Debug/net6.0/Fruitmarket.GeneratedMSBuildEditorConfig.editorconfig
+/Users/paulherbich/RiderProjects/Fruitmarket/Fruitmarket/obj/Debug/net6.0/Fruitmarket.AssemblyInfoInputs.cache
+/Users/paulherbich/RiderProjects/Fruitmarket/Fruitmarket/obj/Debug/net6.0/Fruitmarket.AssemblyInfo.cs
+/Users/paulherbich/RiderProjects/Fruitmarket/Fruitmarket/obj/Debug/net6.0/Fruitmarket.csproj.CoreCompileInputs.cache
+/Users/paulherbich/RiderProjects/Fruitmarket/Fruitmarket/obj/Debug/net6.0/Fruitmarket.dll
+/Users/paulherbich/RiderProjects/Fruitmarket/Fruitmarket/obj/Debug/net6.0/refint/Fruitmarket.dll
+/Users/paulherbich/RiderProjects/Fruitmarket/Fruitmarket/obj/Debug/net6.0/Fruitmarket.pdb
+/Users/paulherbich/RiderProjects/Fruitmarket/Fruitmarket/obj/Debug/net6.0/ref/Fruitmarket.dll
