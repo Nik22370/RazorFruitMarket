@@ -11,6 +11,10 @@ public class Market
     
     protected List<Product> _products = new List<Product>();
     public virtual IReadOnlyCollection<Product> Products => _products;
+    public Guid Guid { get; set; }
+    public bool IsClosed { get; set; }
+
+
 #pragma warning disable CS8618
     
     protected Market()
@@ -22,6 +26,7 @@ public class Market
         Name = name;
         Address = address;
         Owner = owner;
+        Guid = Guid.NewGuid();
     }
 
     public void addProducts(Product product)

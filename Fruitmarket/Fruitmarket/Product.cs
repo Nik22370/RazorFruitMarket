@@ -13,6 +13,8 @@ public class Product
     public string Name { get; set; }
     public decimal Price { get; set; }
     
+    public int MarketId { get; set; }
+    
     //Discriminator
     public string ProductType { get; private set; } = default!;
 
@@ -24,6 +26,16 @@ public class Product
         
         Guid = Guid.NewGuid();
     }
+    
+    public Product(string name, decimal price,int marketId)
+    {
+        Name = name;
+        Price = price;
+        MarketId = marketId;
+        
+        Guid = Guid.NewGuid();
+    }
+    
 #pragma warning disable CS8618
     protected Product()
     {
