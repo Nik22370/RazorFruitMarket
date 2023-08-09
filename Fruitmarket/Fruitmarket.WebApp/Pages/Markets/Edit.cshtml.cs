@@ -47,8 +47,7 @@ public class Edit : PageModel
         Price: product.Price
                 
         );
-            
-        
+
         return Page();
     }
 }

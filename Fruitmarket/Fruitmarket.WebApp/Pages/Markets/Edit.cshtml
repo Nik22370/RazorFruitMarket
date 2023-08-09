@@ -2,17 +2,27 @@
 @model Fruitmarket.WebApp.Pages.Edit
 
 
-<form method="post" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
-    
-    <label asp-for="Product.Name"> Name </label>
-    <input asp-for="Product.Name"/>
+<h1> Edit </h1>
+<form method="post">
+    <input type="hidden" asp-for="Product.Guid"/>
 
-    <label asp-for="Product.Price"> Price </label>
-    <input asp-for="Product.Price"/>
+    <div class="row">
 
-    <button type="submit">Send</button>
+        <div class="col-12 col-sm-6">
+            <label asp-for="Product.Name">Name</label>
+            <input class="form-control" asp-for="Product.Name"/>
+            <span class="text-danger" asp-validation-for="Product.Name"></span>
+        </div>
+
+        <div class="col-12 col-sm-6">
+            <label asp-for="Product.Price">Standort</label>
+            <input class="form-control" asp-for="Product.Price"/>
+            <span class="text-danger" asp-validation-for="Product.Price"></span>
+        </div>
+
+    </div>
+    <div class="mt-3 text-danger" asp-validation-summary=All></div>
+    <button class="btn-primary btn" type="submit">Send</button>
+
 
 </form>
-
-
-

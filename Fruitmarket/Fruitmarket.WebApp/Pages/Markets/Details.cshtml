@@ -1,29 +1,37 @@
-@page "{guid}"
+@page "{guid?}"
 @model Fruitmarket.WebApp.Pages.Markets.DetailsModel
 
-<h3>Details zum Produkt @Model.Product.Name</h3>
-<h4>Details zu den Produkten</h4>
-<table class="table table-sm ">
+
+// Frage an den Paul wieso Name nicht geht?
+<h3>Details Page von @Model.Market</h3>
+
+<p>Anzahl der Produkte: @Model.Products.Count</p>
+
+<table class="table table-sm">
     <thead>
-    
     <tr>
-        <th>Weight</th>
-        <th>IsFruit</th>
-        
-        
+
+        <th>Name</th>
+        <th>Price</th>
+      
+
     </tr>
-    
     </thead>
-    
+
     <tbody>
-    @foreach (var fv in Model.Product._fruitsandvegetables.OrderBy(fv=>fv.Weight))
+    @foreach (var p in Model.Products)
     {
         <tr>
-            <td>@fv.Weight</td>
-            <td>@fv.IsFruit</td>
+
+            <td>@p.Name</td>
+            <td>@p.Price</td>
+            
+           
+            
         </tr>
-        
-        
     }
     </tbody>
+    
 </table>
+
+

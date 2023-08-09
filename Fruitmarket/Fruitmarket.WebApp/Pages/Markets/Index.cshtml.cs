@@ -24,13 +24,10 @@ public class Index : PageModel
         _db = db;
     }
     
-    
+    // Habe hier statt dem Code hier:   Markets = _db.Markets.ToList();
     public void OnGet()
     {
-        Markets = _db.Markets.ToList();
-       
-        
-
+      Markets = _db.Markets.OrderBy(m => m.Name).ToList();
     }
     
     

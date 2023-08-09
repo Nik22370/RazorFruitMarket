@@ -8,6 +8,8 @@ namespace Fruitmarket.WebApp.Dto
         string Name,
         decimal Price
     );
+    
+    
 
 
 
